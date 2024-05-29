@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {font-weight: bold}
+.r2 {font-style: italic}
+.r3 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r4 {color: #7c8082; text-decoration-color: #7c8082; font-style: italic}
+.r5 {color: #5a7c90; text-decoration-color: #5a7c90}
+.r7 {color: #ff753d; text-decoration-color: #ff753d; font-weight: bold}
+.r8 {color: #00875f; text-decoration-color: #00875f}
+.r9 {color: #ff0000; text-decoration-color: #ff0000}
+.r10 {color: #808000; text-decoration-color: #808000}
+.r11 {font-weight: bold; text-decoration: underline}
+.r12 {color: #00ff00; text-decoration-color: #00ff00}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit">╭─────────────────── Risk Audit Capability ───────────────────╮
+│ Depscan supports OSS Risk audit for this project.           │
+│ To enable set the environment variable <span class="r1">ENABLE_OSS_RISK=true</span> │
+╰─────────────────────────────────────────────────────────────╯
+
+<span class="r2">                                              Dependency Scan Results (JAVASCRIPT)                                               </span>
+╔════════════════════════════════════════════════════════════╤══════════════════════════════╤═══════════════╤═══════════╤═══════╗
+║<span class="r3"> Dependency Tree                                            </span>│<span class="r3"> Insights                     </span>│<span class="r3"> Fix Version   </span>│<span class="r3"> Severity  </span>│<span class="r3"> Score </span>║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2019-1010266                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">os-locale@2.1.0                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.0.0         │ MEDIUM    │   5.1 ║
+║ <span class="r6">└── </span><span class="r7">mem@1.1.0 ⬅ NPM-1085685                               </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongoose@4.2.4                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.2.3         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">mquery@1.6.3 ⬅ CVE-2020-35149                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">http-server@0.12.3                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.1.3         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">ecstatic@3.3.2 ⬅ CVE-2019-10775                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongoose@4.2.4                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.13        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">mongodb@2.0.46 ⬅ NPM-1086754                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">1</span> locations       │               │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.0</span> ║
+║ <span class="r6">└── </span><span class="r7">marsdb@0.6.11 ⬅ NPM-1086801                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">jsonwebtoken@0.1.0                                        </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 3.0.0         │ HIGH      │   8.7 ║
+║ <span class="r6">└── </span><span class="r7">jws@0.2.6 ⬅ CVE-2016-1000223                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.6.2         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ NPM-1088022                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">d3-color@1.4.1 ⬅ NPM-1088594                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">2</span> locations       │               │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">notevil@1.3.3 ⬅ CVE-2021-23771                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">download@8.0.0                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 11.8.5        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">got@8.3.2 ⬅ CVE-2022-33987                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 11.0.4        │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">react-dev-utils@4.2.3 ⬅ CVE-2021-24033                </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.814.0       │ HIGH      │   7.3 ║
+║ <span class="r6">└── </span><span class="r7">aws-sdk@2.1.40 ⬅ CVE-2020-28472                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">amdify@0.0.26                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.10        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">ejs@0.8.8 ⬅ CVE-2022-29078                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.3.0         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">typeorm@0.2.24 ⬅ CVE-2020-8158                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.4.0 ⬅ CVE-2022-23539                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">postcss-svgo@2.1.6                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.3.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">is-svg@2.1.0 ⬅ CVE-2021-29059                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">colormin@1.1.2                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.5.5         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">color-string@0.3.0 ⬅ CVE-2021-29060                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 2.12.1        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2021-26540                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 6.0.0         │ HIGH      │   7.7 ║
+║ <span class="r6">└── </span><span class="r7">express-jwt@0.1.3 ⬅ CVE-2020-15084                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure@0.10.6                                              </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.4.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">node-uuid@1.2.0 ⬅ CVE-2015-8851                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 1.4.3         │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2016-1000237                </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 4.2.2         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.0</span> ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.4.0 ⬅ CVE-2015-9235                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.4.0 ⬅ CVE-2022-23541                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.7.0         │ LOW       │   2.0 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ NPM-1091665                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.3         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">hawk@1.0.0 ⬅ CVE-2016-2515                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 2.12.1        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2021-26539                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">jwa@0.0.1                                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">base64url@0.0.6 ⬅ NPM-1091792                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongodb-core@1.2.19                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.1.4         │ MEDIUM    │   5.4 ║
+║ <span class="r6">└── </span><span class="r7">bson@0.4.23 ⬅ CVE-2019-2391                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   6.4 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.4.0 ⬅ CVE-2022-23540                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongodb-core@1.2.19                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.0.0         │ HIGH      │   7.8 ║
+║ <span class="r6">└── </span><span class="r7">kerberos@0.0.24 ⬅ CVE-2020-13110                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongoose@4.2.4                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.8.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">mpath@0.1.1 ⬅ CVE-2018-16490                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">amdify@0.0.26                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.5.5         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">ejs@0.8.8 ⬅ CVE-2017-1000228                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">amdify@0.0.26                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.5.5         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">ejs@0.8.8 ⬅ CVE-2017-1000189                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">amdify@0.0.26                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.5.5         │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">ejs@0.8.8 ⬅ CVE-2017-1000188                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 1.11.4        │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2017-16016                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">url-loader@0.5.9                                          </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.4.1         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">mime@1.3.6 ⬅ CVE-2017-16138                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">boom@0.4.2                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.2.1         │ HIGH      │   8.8 ║
+║ <span class="r6">└── </span><span class="r7">hoek@0.9.1 ⬅ CVE-2018-3728                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">postcss-svgo@2.1.6                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.3.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">is-svg@2.1.0 ⬅ CVE-2021-28092                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ core@9.0.0 ⬅ CVE-2021-4231                                 │ 🎯 Used in <span class="r5">120</span> locations     │ 10.2.5        │ MEDIUM    │   5.4 ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mquery@1.6.3                                              </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.0.0         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">ms@0.7.1 ⬅ CVE-2017-20162                             </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2018-16487                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2020-28500                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">postcss-less@3.1.4                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 8.4.31        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">postcss@7.0.39 ⬅ CVE-2023-44270                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">juicy-chat-bot@0.8.0                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.9.18        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">vm2@3.9.17 ⬅ CVE-2023-37466                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">juicy-chat-bot@0.8.0                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.9.18        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">vm2@3.9.17 ⬅ CVE-2023-32314                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">juicy-chat-bot@0.8.0                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.9.18        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">vm2@3.9.17 ⬅ CVE-2023-32313                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">juicy-chat-bot@0.8.0                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.9.18        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">vm2@3.9.17 ⬅ CVE-2023-37903                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongodb-core@1.2.19                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.1.4         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">bson@0.4.23 ⬅ CVE-2020-7610                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">webpack-dev-server@2.11.5                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.0.8         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">ansi-html@0.0.7 ⬅ CVE-2021-23424                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sockjs-client@1.1.4                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.1.1         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.3</span> ║
+║ <span class="r6">└── </span><span class="r7">eventsource@0.1.6 ⬅ CVE-2022-1650                     </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.0.10        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ CVE-2022-21680                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.0.10        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ CVE-2022-21681                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 9.0.1         │ HIGH      │   7.4 ║
+║ <span class="r6">└── </span><span class="r7">hawk@1.0.0 ⬅ CVE-2022-29167                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongoose@4.2.4                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.8.4         │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">mpath@0.1.1 ⬅ CVE-2021-23438                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.13.21       │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.1</span> ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ CVE-2019-17426                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.13.20       │ HIGH      │   7.0 ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ CVE-2022-2564                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.13.20       │ <span class="r9">CRITICAL</span>  │  <span class="r9">10.0</span> ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ CVE-2023-3696                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.12.1        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">underscore@1.4.4 ⬅ CVE-2021-23358                     </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.3.6         │ MEDIUM    │   5.1 ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ NPM-1095195                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">grunt-replace-json@0.1.0                                  </span> │ <span class="r8">📓 Indirect dependency</span>       │               │ HIGH      │   7.4 ║
+║ <span class="r6">└── </span><span class="r7">lodash.set@4.3.2 ⬅ CVE-2020-8203                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">cheerio@0.22.0                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │               │ HIGH      │   7.4 ║
+║ <span class="r6">└── </span><span class="r7">lodash.pick@4.4.0 ⬅ CVE-2020-8203                     </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">pdfkit@0.11.0                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.2.0         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.1</span> ║
+║ <span class="r6">└── </span><span class="r7">crypto-js@3.3.0 ⬅ CVE-2023-46233                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">react-dev-utils@4.2.3                                     </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.7.3         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">shell-quote@1.6.1 ⬅ CVE-2021-42740                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">boom@0.4.2                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.2.1         │ HIGH      │   8.1 ║
+║ <span class="r6">└── </span><span class="r7">hoek@0.9.1 ⬅ CVE-2020-36604                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">rc@1.2.8                                                  </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.2.6         │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">minimist@1.2.0 ⬅ CVE-2020-7598                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">rc@1.2.8                                                  </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.2.6         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">minimist@1.2.0 ⬅ CVE-2021-44906                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 2.12.1        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2024-21501                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">request@2.88.2                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.1.3         │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">tough-cookie@2.5.0 ⬅ CVE-2023-26136                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">typeorm@0.2.24                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.5.0         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">xml2js@0.4.23 ⬅ CVE-2023-0842                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">5</span> locations       │               │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">request@2.88.2 ⬅ CVE-2023-28155                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.3.0         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">typeorm@0.2.24 ⬅ CVE-2022-33171                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">babel-template@6.26.0                                     </span> │ <span class="r8">📓 Indirect dependency</span>       │               │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.4</span> ║
+║ <span class="r6">└── </span><span class="r7">babel-traverse@6.26.0 ⬅ CVE-2023-45133                </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">node-pre-gyp@0.15.0                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.1         │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.19 ⬅ CVE-2024-28863                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ HIGH      │   7.2 ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2021-23337                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2018-3721                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sanitize-html@1.4.2                                       </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 4.17.21       │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.1</span> ║
+║ <span class="r6">└── </span><span class="r7">lodash@2.4.2 ⬅ CVE-2019-10744                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">html-webpack-plugin@2.30.1                                </span> │ <span class="r8">📓 Indirect dependency</span>       │               │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">html-minifier@3.5.21 ⬅ CVE-2022-37620                 </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.13.20       │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ CVE-2022-24304                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │ 2.12.1        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">sanitize-html@1.4.2 ⬅ CVE-2022-25887                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">amdify@0.0.26                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.10        │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">ejs@0.8.8 ⬅ CVE-2024-33883                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">cyclonedx-library@6.8.0                                   </span> │ 🎯 Used in <span class="r5">2</span> locations       │               │ HIGH      │   8.1 ║
+║ <span class="r6">└── </span><span class="r7">libxmljs2@0.33.0 ⬅ CVE-2024-34393                     </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">cyclonedx-library@6.8.0                                   </span> │ 🎯 Used in <span class="r5">2</span> locations       │               │ HIGH      │   8.1 ║
+║ <span class="r6">└── </span><span class="r7">libxmljs2@0.33.0 ⬅ CVE-2024-34394                     </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">4</span> locations       │               │ HIGH      │   8.1 ║
+║ <span class="r6">└── </span><span class="r7">pug@3.0.2 ⬅ CVE-2024-36361                            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">socket.io@3.1.2                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.2.3         │ HIGH      │   7.3 ║
+║ <span class="r6">└── </span><span class="r7">socket.io-parser@4.0.5 ⬅ CVE-2023-32695               </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 13.7.0        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">validator@3.1.0 ⬅ CVE-2021-3765                       </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.0.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@0.6.6 ⬅ CVE-2014-7191                              </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.6.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">tunnel-agent@0.3.0 ⬅ GHSA-xc7v-wxcw-j472              </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ 🎯 Used in <span class="r5">5</span> locations       │ 2.68.0        │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">request@2.45.0 ⬅ CVE-2023-28155                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.3.6         │ MEDIUM    │   5.1 ║
+║ <span class="r6">└── </span><span class="r7">mongoose@4.2.4 ⬅ GHSA-r5xw-q988-826m                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">d3-color@1.4.1 ⬅ GHSA-36jr-mh4h-2g58                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">autoprefixer@7.2.6                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 8.4.31        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">postcss@6.0.23 ⬅ CVE-2023-44270                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ 🎯 Used in <span class="r5">2</span> locations       │ 5.7.2         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">semver@5.7.1 ⬅ CVE-2022-25883                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ CVE-2022-24772                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.0.0 ⬅ CVE-2022-24785                         </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.4.18        │ HIGH      │   8.2 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.13 ⬅ CVE-2021-37713                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">postcss-calc@5.3.1                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 8.4.31        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">postcss@5.2.18 ⬅ CVE-2023-44270                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ CVE-2022-24771                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@1.2.2 ⬅ CVE-2022-24999                             </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.4.15        │ HIGH      │   8.2 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.13 ⬅ CVE-2021-32803                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-arm-insights@0.10.0                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.6.0 ⬅ CVE-2016-4055                          </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.1.0 ⬅ CVE-2022-23539                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.1.0 ⬅ CVE-2022-23541                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">html-webpack-plugin@2.30.1                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.4.1         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">loader-utils@0.2.17 ⬅ CVE-2022-37601                  </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">jwa@0.0.1                                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.0.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">base64url@0.0.6 ⬅ GHSA-rvg8-pwq2-xj7q                 </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">chokidar@2.1.8                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.1.2         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">glob-parent@3.1.0 ⬅ CVE-2020-28469                    </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">webpack-dev-server@2.11.5                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.3.20        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">sockjs@0.3.19 ⬅ CVE-2020-7693                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.1         │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.13 ⬅ CVE-2024-28863                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.0.0 ⬅ CVE-2016-4055                          </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ 🎯 Used in <span class="r5">5</span> locations       │ 2.68.0        │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">request@2.27.0 ⬅ CVE-2023-28155                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.6.2         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ GHSA-xf5p-87ch-gxw2                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.4.14        │ HIGH      │   8.2 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.13 ⬅ CVE-2021-32804                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mquery@1.6.3                                              </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.6.9         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">debug@2.2.0 ⬅ CVE-2017-20165                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ LOW       │   2.0 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ GHSA-gf8q-jrpm-jvxq               </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">aws-sdk@2.1.40                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.5.0         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">xml2js@0.2.8 ⬅ CVE-2023-0842                          </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mquery@1.6.3                                              </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.6.9         │ LOW       │   3.7 ║
+║ <span class="r6">└── </span><span class="r7">debug@2.2.0 ⬅ CVE-2017-16137                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.2.4         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">minimist@0.0.8 ⬅ CVE-2021-44906                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.11        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">webpack-dev-server@2.11.5 ⬅ CVE-2018-14732            </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">socket.io@3.1.2                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.1         │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">engine.io@4.1.2 ⬅ CVE-2022-41940                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-arm-insights@0.10.0                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.6.0 ⬅ CVE-2017-18214                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">schema-utils@0.3.0                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.12.3        │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">ajv@5.5.2 ⬅ CVE-2020-15366                            </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">webpack-dev-server@2.11.5                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.0.1         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">yargs-parser@4.2.1 ⬅ CVE-2020-7608                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sardines@0.4.5                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.6.0         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">uglify-js@1.3.5 ⬅ CVE-2015-8857                       </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">cacheable-request@2.1.4                                   </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.1.1         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">http-cache-semantics@3.8.1 ⬅ CVE-2022-25881           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">sardines@0.4.5                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.6.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">uglify-js@1.3.5 ⬅ CVE-2015-8858                       </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">postcss-calc@5.3.1                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 7.0.36        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">postcss@5.2.18 ⬅ CVE-2021-23382                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">recursive-readdir@2.2.1                                   </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.0.5         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">minimatch@3.0.3 ⬅ CVE-2022-3517                       </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.2.3         │ MEDIUM    │   6.5 ║
+║ <span class="r6">└── </span><span class="r7">bl@0.9.5 ⬅ CVE-2020-8244                              </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+║                                                            │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.6         │ HIGH      │   7.3 ║
+║ <span class="r6">└── </span><span class="r7">ini@1.3.5 ⬅ CVE-2020-7788                             </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@0.6.6 ⬅ CVE-2022-24999                             </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">autoprefixer@7.2.6                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 7.0.36        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">postcss@6.0.23 ⬅ CVE-2021-23382                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.2.7         │ LOW       │   3.7 ║
+║ <span class="r6">└── </span><span class="r7">debug@3.2.6 ⬅ CVE-2017-16137                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@0.6.6 ⬅ CVE-2017-1000048                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.0.0         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@0.6.6 ⬅ CVE-2014-10064                             </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-keyvault@0.9.2                                      </span> │ 🎯 Used in <span class="r5">5</span> locations       │ 2.68.0        │ MEDIUM    │   5.9 ║
+║ <span class="r6">└── </span><span class="r7">request@2.27.0 ⬅ CVE-2017-16026                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.2.4         │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">minimist@0.0.8 ⬅ CVE-2020-7598                        </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 6.2.4         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">qs@1.2.2 ⬅ CVE-2017-1000048                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.4.1         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">mime@1.2.11 ⬅ CVE-2017-16138                          </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ LOW       │   2.0 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ GHSA-5rrq-pxf6-6jx5               </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">catalog@4.4.5                                             </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.7.0         │ LOW       │   2.0 ║
+║ <span class="r6">└── </span><span class="r7">marked@0.4.0 ⬅ GHSA-ch52-vgq2-943f                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.5.0         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">xml2js@0.2.7 ⬅ CVE-2023-0842                          </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ 🎯 Used in <span class="r5">5</span> locations       │ 2.68.0        │ MEDIUM    │   5.9 ║
+║ <span class="r6">└── </span><span class="r7">request@2.45.0 ⬅ CVE-2017-16026                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">puppeteer@10.4.0                                          </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.6.7         │ HIGH      │   8.8 ║
+║ <span class="r6">└── </span><span class="r7">node-fetch@2.6.1 ⬅ CVE-2022-0235                      </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+║                                                            │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mocha@8.4.0                                               </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.31        │ MEDIUM    │   5.5 ║
+║ <span class="r6">└── </span><span class="r7">nanoid@3.1.20 ⬅ CVE-2021-23566                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 9.0.0         │ MEDIUM    │   6.4 ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.1.0 ⬅ CVE-2022-23540                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">meow@3.7.0                                                </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.0.1         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">trim-newlines@1.0.0 ⬅ CVE-2021-33623                  </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ 🎯 Used in <span class="r5">7</span> locations       │ 4.2.2         │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.0</span> ║
+║ <span class="r6">└── </span><span class="r7">jsonwebtoken@0.1.0 ⬅ CVE-2015-9235                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">svgo@0.7.2                                                </span> │ 🎯 Used in <span class="r5">8</span> locations       │ 3.13.1        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">js-yaml@3.7.0 ⬅ GHSA-8j8c-7jfh-h6hx                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-storage@0.3.3                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.0.2         │ MEDIUM    │   5.6 ║
+║ <span class="r6">└── </span><span class="r7">extend@1.2.1 ⬅ CVE-2018-16492                         </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">request@2.45.0                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.3         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">hawk@1.1.1 ⬅ CVE-2016-2515                            </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">mongoose@4.2.4                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.1.13        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">mongodb@2.0.46 ⬅ GHSA-mh5c-679w-hh4r                  </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">express-jwt@0.1.3                                         </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.0.0 ⬅ CVE-2017-18214                         </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">babel-core@6.26.3                                         </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.0.2         │ HIGH      │   7.1 ║
+║ <span class="r6">└── </span><span class="r7">json5@0.5.1 ⬅ CVE-2022-46175                          </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ CVE-2022-24773                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">svgo@0.7.2                                                </span> │ 🎯 Used in <span class="r5">8</span> locations       │ 3.13.1        │ MEDIUM    │   5.9 ║
+║ <span class="r6">└── </span><span class="r7">js-yaml@3.7.0 ⬅ GHSA-2pr6-76vf-7546                   </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">webpack-dev-server@2.11.5                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 5.3.4         │ HIGH      │   7.4 ║
+║ <span class="r6">└── </span><span class="r7">webpack-dev-middleware@1.12.2 ⬅ CVE-2024-29180        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-arm-insights@0.10.0                                 </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.29.2        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">moment@2.6.0 ⬅ CVE-2022-24785                         </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 0.6.0         │ MEDIUM    │   5.0 ║
+║ <span class="r6">└── </span><span class="r7">tunnel-agent@0.4.3 ⬅ GHSA-xc7v-wxcw-j472              </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.0.5         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">minimatch@3.0.4 ⬅ CVE-2022-3517                       </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">os-locale@2.1.0                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.0.0         │ MEDIUM    │   5.1 ║
+║ <span class="r6">└── </span><span class="r7">mem@1.1.0 ⬅ GHSA-4xcv-9jjx-gfj3                       </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">azure-common@0.9.12                                       </span> │ <span class="r8">📓 Indirect dependency</span>       │ 3.22.1        │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">validator@3.1.0 ⬅ CVE-2014-8882                       </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">fsevents@1.2.10                                           </span> │ <span class="r8">📓 Indirect dependency</span>       │ 4.4.16        │ HIGH      │   8.2 ║
+║ <span class="r6">└── </span><span class="r7">tar@4.4.13 ⬅ CVE-2021-37701                           </span> │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">chokidar@2.1.8                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.2.11        │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.8</span> ║
+║ <span class="r6">└── </span><span class="r7">fsevents@1.2.10 ⬅ CVE-2023-45311                      </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">request@2.45.0                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 9.0.1         │ HIGH      │   7.4 ║
+║ <span class="r6">└── </span><span class="r7">hawk@1.1.1 ⬅ CVE-2022-29167                           </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">chokidar@2.1.8                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.2.11        │ LOW       │   2.0 ║
+║ <span class="r6">└── </span><span class="r7">fsevents@1.2.10 ⬅ MAL-2023-462                        </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">selfsigned@1.10.14                                        </span> │ <span class="r8">📓 Indirect dependency</span>       │ 1.3.0         │ MEDIUM    │   6.1 ║
+║ <span class="r6">└── </span><span class="r7">node-forge@0.10.0 ⬅ CVE-2022-0122                     </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">webpack@3.12.0                                            </span> │ <span class="r8">📓 Indirect dependency</span>       │ 13.1.2        │ MEDIUM    │   5.3 ║
+║ <span class="r6">└── </span><span class="r7">yargs-parser@7.0.0 ⬅ CVE-2020-7608                    </span> │                              │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">css-select@1.2.0                                          </span> │ <span class="r8">📓 Indirect dependency</span>       │ 2.0.1         │ HIGH      │   7.5 ║
+║ <span class="r6">└── </span><span class="r7">nth-check@1.0.2 ⬅ CVE-2021-3803                       </span> │ <span class="r10">📔 Has PoC</span>                   │               │           │       ║
+║                                                            │ 🧾 Vendor Confirmed          │               │           │       ║
+╟────────────────────────────────────────────────────────────┼──────────────────────────────┼───────────────┼───────────┼───────╢
+║ <span class="r4">app@16.0.1                                                </span> │ 🎯 Used in <span class="r5">1</span> locations       │               │ <span class="r9">CRITICAL</span>  │   <span class="r9">9.0</span> ║
+║ <span class="r6">└── </span><span class="r7">marsdb@0.6.11 ⬅ GHSA-5mrr-rgp6-x4gr                   </span> │                              │               │           │       ║
+╚════════════════════════════════════════════════════════════╧══════════════════════════════╧═══════════════╧═══════════╧═══════╝
+
+                                                           <span class="r11">Next Steps</span>                                                            
+
+Below are the vulnerabilities prioritized by depscan. Follow your team&#x27;s remediation workflow to mitigate these findings.        
+
+<span class="r2">                                                    Top Priority (JAVASCRIPT)                                                    </span>
+╔══════════════════════════════════════════════════════════════╤════════════════════════╤═════════════════════╤═════════════════╗
+║<span class="r3"> Package                                                      </span>│<span class="r3"> CVEs                   </span>│<span class="r3"> Fix Version         </span>│<span class="r3"> Reachable       </span>║
+╟──────────────────────────────────────────────────────────────┼────────────────────────┼─────────────────────┼─────────────────╢
+║ <span class="r4">puppeteer@10.4.0                                            </span> │ CVE-2022-0235          │ <span class="r12">2.6.7</span>               │                 ║
+║ <span class="r6">└── </span><span class="r7">node-fetch@2.6.1 ⬅ CVE-2022-0235                        </span> │                        │                     │                 ║
+╟──────────────────────────────────────────────────────────────┼────────────────────────┼─────────────────────┼─────────────────╢
+║ <span class="r4">css-select@1.2.0                                            </span> │ CVE-2021-3803          │ <span class="r12">2.0.1</span>               │                 ║
+║ <span class="r6">└── </span><span class="r7">nth-check@1.0.2 ⬅ CVE-2021-3803                         </span> │                        │                     │                 ║
+╚══════════════════════════════════════════════════════════════╧════════════════════════╧═════════════════════╧═════════════════╝
+
+╭──────────────────────────────────── Recommendation ────────────────────────────────────╮
+│ 👉 <span class="r5">14</span> out of 169 vulnerabilities requires your attention.                              │
+│ You can remediate <span class="r12">83</span> vulnerabilities by updating the packages using the fix version 👍 │
+╰────────────────────────────────────────────────────────────────────────────────────────╯
+</code></pre>
+</body>
+</html>
