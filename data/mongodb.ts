@@ -10,8 +10,7 @@
 // const orders = new MarsDB.Collection('orders')
 
 // const db = {
-//   reviews,
-//   orders
-// }
-
-// module.exports = db
+//    reviews,
+// orders
+//  }
+//  module.exports = db
